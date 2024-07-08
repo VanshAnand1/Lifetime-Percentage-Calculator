@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="homepage.css" />
+<script src="homepage.js"></script>
+<script src="https://kit.fontawesome.com/df7dbf8a66.js" crossorigin="anonymous"></script>
+
+<head>
+    <title>Lifetime Percentage Calculator</title>
+</head>
+
+<body>
+    <div id="center">
+        <h2>Birthdate:</h2>
+        <form class="dates" onsubmit="return false">
+            <input type="date" name="birthDate" id="birthDate" required>
+            <h2>Event Date:</h2>
+            <p>must be after birth date</p>
+            <input type="date" name="eventDate" id="eventDate" required>
+            <br>
+            <button type="submit" onclick="calculate()">Calculate!</button>
+        </form>
+    </div>
+</body>
