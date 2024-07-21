@@ -1,15 +1,24 @@
 function calculate() {
-    const birthDate = document.getElementById("birthDate");
-    const eventDate = document.getElementById("eventDate");
+    const birthDate = document.getElementById("birthDate").value;
+    const firstDate = document.getElementById("firstDate").value;
+    const secondDate = document.getElementById("secondDate").value;
     const todayDate = Date();
 
-    const testDate = new Date("05/10/2022");
+    const birthDateStamp = new Date(birthDate).getTime();
+    const firstDayStamp = new Date(firstDate).getTime();
+    const secondDayStamp = new Date(secondDate).getTime();
+    const todayDateStamp = new Date(todayDate).getTime();
 
-    console.log(birthDate.value);
-    console.log(eventDate.value);
-    console.log(todayDate);
+    //calculate time difference 
+    if (secondDayStamp > firstDayStamp && birthDate < firstDate) {
+        const timeDifferenceEvents = Math.round((secondDayStamp - firstDayStamp) / (1000 * 60 * 60 * 24));
+        const timeDifferenceAge = Math.round((todayDateStamp - birthDateStamp) / (1000 * 60 * 60 * 24));
+        const percentageTimeDifference = (timeDifferenceEvents / timeDifferenceAge) * 100;
 
-    const timeBetween = todayDate.getTime() - testDate.getTime();
-    console.log(timeBetween);
-
+        const element = document.getElementById('answer');
+        answer.innerHTML = percentageTimeDifference;
+    } else {
+        const element = document.getElementById('answer');
+        answer.innerHTML = 'i think you entered the dates wrong!!!!!';
+    }
 }

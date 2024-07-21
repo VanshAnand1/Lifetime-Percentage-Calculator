@@ -9,15 +9,26 @@
 </head>
 
 <body>
-    <div id="center">
-        <h2>Birthdate:</h2>
-        <form class="dates" onsubmit="return false">
+    <div id="header">
+        <p>This website can be used to determine what percentage of your lifetime a time period has lasted.
+            It takes in the start and end dates of the time period, as well as your birthdate. It calculates the amount
+            of days the event lasted, and the number of days you have been alive, and returns the percentage. One
+            use of this calculator is find out what percentage of your life you have known someone. </p>
+    </div>
+    <div id="form">
+        <form class="dates">
+            <h2>Birth Date:</h2>
+            <p>the day you were born!!!!!</p>
             <input type="date" name="birthDate" id="birthDate" required>
-            <h2>Event Date:</h2>
-            <p>must be after birth date</p>
-            <input type="date" name="eventDate" id="eventDate" required>
-            <br>
-            <button type="submit" onclick="calculate()">Calculate!</button>
+            <h2>First Date:</h2>
+            <p>the start of the event!!!!!</p>
+            <input type="date" name="firstDate" id="firstDate" required>
+            <h2>Second Date:</h2>
+            <p>must be after first date!!!!!</p>
+            <input type="date" name="secondDate" id="secondDate" required>
+            <br><br>
+            <button type="button" class="submit" onclick="calculate()">Calculate!</button>
         </form>
     </div>
+    <div id="answer"></div>
 </body>
