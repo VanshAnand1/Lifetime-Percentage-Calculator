@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #242527;
 }
 
 #header p {
@@ -7,6 +7,7 @@ body {
     margin-left: 30%;
     margin-right: 30%;
     text-align: center;
+    color: rgb(196, 196, 196);
 }
 
 #form {
@@ -41,7 +42,7 @@ input[type="date"] {
 
 button[type="button"] {
     background: transparent;
-    color: #242527;
+    color: black;
 }
 
 .submit {
