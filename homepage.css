@@ -41,7 +41,7 @@ input[type="date"] {
 
 button[type="button"] {
     background: transparent;
-    color: rgb(0, 0, 0);
+    color: #242527;
 }
 
 .submit {
